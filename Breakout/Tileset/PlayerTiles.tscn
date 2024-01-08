@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://48wfr60toq04"]
+
+[ext_resource type="Texture2D" uid="uid://cno8xb8hhdwt0" path="res://Noah_Breakout/Breakout/GameAssets/Sprites/player_tileMap.png" id="1_njx22"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qx3l2"]
+texture = ExtResource("1_njx22")
+2:0/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ju3vy"]
+sources/1 = SubResource("TileSetAtlasSource_qx3l2")
+
+[node name="PlayerTiles" type="TileMap"]
+tile_set = SubResource("TileSet_ju3vy")
+format = 2
+
+[node name="LeftPart" type="Sprite2D" parent="."]
+texture = ExtResource("1_njx22")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 24, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LeftPart"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftPart/StaticBody2D"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(25, 32, 25, 0, 14, 0, 9, 2, 5, 6, 3, 9, 2, 11, 1, 14, 1, 19, 3, 24, 5, 26, 7, 28, 9, 30, 13, 32)
+
+[node name="MiddlePart" type="Sprite2D" parent="."]
+position = Vector2(32, 0)
+texture = ExtResource("1_njx22")
+centered = false
+region_enabled = true
+region_rect = Rect2(24, 0, 24, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MiddlePart"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MiddlePart/StaticBody2D"]
+polygon = PackedVector2Array(24, 0, 24, 32, 0, 32, 0, 0)
+
+[node name="RightPart" type="Sprite2D" parent="."]
+position = Vector2(64, 0)
+texture = ExtResource("1_njx22")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 24, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RightPart"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RightPart/StaticBody2D"]
+position = Vector2(25, 32)
+rotation = 3.14159
+polygon = PackedVector2Array(25, 32, 25, 0, 14, 0, 9, 2, 5, 6, 3, 9, 2, 11, 1, 14, 1, 19, 3, 24, 5, 26, 7, 28, 9, 30, 13, 32)

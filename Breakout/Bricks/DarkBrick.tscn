@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7dtfolde01la"]
+
+[ext_resource type="Texture2D" uid="uid://d03n7wuyonqs0" path="res://Noah_Breakout/Breakout/GameAssets/Sprites/brick_dark.png" id="1_nyjl4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ckux5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nyjl4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05f2i"]
+size = Vector2(96, 32)
+
+[node name="DarkBrick" type="StaticBody2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(48, 16)
+sprite_frames = SubResource("SpriteFrames_ckux5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(48, 16)
+shape = SubResource("RectangleShape2D_05f2i")

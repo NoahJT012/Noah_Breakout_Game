@@ -1,0 +1,288 @@
+[gd_scene load_steps=16 format=3 uid="uid://dvyarvrvwnl35"]
+
+[ext_resource type="PackedScene" uid="uid://chxq28vqox7lr" path="res://Noah_Breakout/Breakout_player/breakout_player.tscn" id="1_lni11"]
+[ext_resource type="Script" path="res://Noah_Breakout/Breakout/Worlds/world.gd" id="1_tpial"]
+[ext_resource type="Texture2D" uid="uid://ddsicvt68seyx" path="res://Noah_Breakout/Breakout/GameAssets/Sprites/wall_blue.png" id="2_xnshy"]
+[ext_resource type="Texture2D" uid="uid://beola7bulql8x" path="res://Noah_Breakout/Breakout/GameAssets/Sprites/wall_gray.png" id="3_udfag"]
+[ext_resource type="Texture2D" uid="uid://l4nevd6yt3xt" path="res://Noah_Breakout/Breakout/GameAssets/Sprites/wall_green.png" id="4_546i2"]
+[ext_resource type="PackedScene" uid="uid://7ocrhkhkqn4y" path="res://Noah_Breakout/Breakout_player/Ball.tscn" id="5_kh7kn"]
+[ext_resource type="PackedScene" uid="uid://bv6qf6tjl4av1" path="res://Noah_Breakout/Breakout/Bricks/BlueBrick.tscn" id="6_8dfe0"]
+[ext_resource type="PackedScene" uid="uid://cg4lkvsc7ft2u" path="res://Noah_Breakout/Breakout/Bricks/GreenBrick.tscn" id="8_8e11j"]
+[ext_resource type="PackedScene" uid="uid://c7dtfolde01la" path="res://Noah_Breakout/Breakout/Bricks/DarkBrick.tscn" id="9_0t22n"]
+[ext_resource type="PackedScene" uid="uid://c2fcdbsox43q2" path="res://Pause_Menu/pause.tscn" id="10_subv7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qqwju"]
+texture = ExtResource("2_xnshy")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oercd"]
+texture = ExtResource("3_udfag")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dcf5h"]
+texture = ExtResource("4_546i2")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_hvhqr"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_qqwju")
+sources/1 = SubResource("TileSetAtlasSource_oercd")
+sources/2 = SubResource("TileSetAtlasSource_dcf5h")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1gbg"]
+size = Vector2(960, 192)
+
+[node name="World" type="Node"]
+script = ExtResource("1_tpial")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-125, 0)
+scale = Vector2(1.25, 1.25)
+anchor_mode = 0
+
+[node name="player" parent="." instance=ExtResource("1_lni11")]
+position = Vector2(429, 694)
+
+[node name="Ball" parent="." instance=ExtResource("5_kh7kn")]
+position = Vector2(484, 618)
+
+[node name="Wall" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_hvhqr")
+format = 2
+layer_0/tile_data = PackedInt32Array(3014656, 2, 0, 3080192, 2, 1, 3014657, 65538, 0, 3080193, 65538, 1, 2883584, 2, 0, 2949120, 2, 1, 2883585, 65538, 0, 2949121, 65538, 1, 2752512, 2, 0, 2818048, 2, 1, 2752513, 65538, 0, 2818049, 65538, 1, 2621440, 2, 0, 2686976, 2, 1, 2621441, 65538, 0, 2686977, 65538, 1, 2490368, 2, 0, 2555904, 2, 1, 2490369, 65538, 0, 2555905, 65538, 1, 2359296, 2, 0, 2424832, 2, 1, 2359297, 65538, 0, 2424833, 65538, 1, 2228224, 2, 0, 2293760, 2, 1, 2228225, 65538, 0, 2293761, 65538, 1, 2097152, 2, 0, 2162688, 2, 1, 2097153, 65538, 0, 2162689, 65538, 1, 1966080, 2, 0, 2031616, 2, 1, 1966081, 65538, 0, 2031617, 65538, 1, 1835008, 2, 0, 1900544, 2, 1, 1835009, 65538, 0, 1900545, 65538, 1, 1703936, 2, 0, 1769472, 2, 1, 1703937, 65538, 0, 1769473, 65538, 1, 1572864, 2, 0, 1638400, 2, 1, 1572865, 65538, 0, 1638401, 65538, 1, 1441792, 2, 0, 1507328, 2, 1, 1441793, 65538, 0, 1507329, 65538, 1, 1310720, 2, 0, 1376256, 2, 1, 1310721, 65538, 0, 1376257, 65538, 1, 1179648, 2, 0, 1245184, 2, 1, 1179649, 65538, 0, 1245185, 65538, 1, 1048576, 2, 0, 1114112, 2, 1, 1048577, 65538, 0, 1114113, 65538, 1, 917504, 2, 0, 983040, 2, 1, 917505, 65538, 0, 983041, 65538, 1, 786432, 2, 0, 851968, 2, 1, 786433, 65538, 0, 851969, 65538, 1, 655360, 2, 0, 720896, 2, 1, 655361, 65538, 0, 720897, 65538, 1, 524288, 2, 0, 589824, 2, 1, 524289, 65538, 0, 589825, 65538, 1, 393216, 2, 0, 458752, 2, 1, 393217, 65538, 0, 458753, 65538, 1, 262144, 2, 0, 327680, 2, 1, 262145, 65538, 0, 327681, 65538, 1, 131072, 2, 0, 196608, 2, 1, 131073, 65538, 0, 196609, 65538, 1, 0, 2, 0, 65536, 2, 1, 1, 65538, 0, 65537, 65538, 1, 2, 1, 0, 65538, 1, 1, 3, 65537, 0, 65539, 65537, 1, 4, 1, 0, 65540, 1, 1, 5, 65537, 0, 65541, 65537, 1, 6, 1, 0, 65542, 1, 1, 7, 65537, 0, 65543, 65537, 1, 8, 1, 0, 65544, 1, 1, 9, 65537, 0, 65545, 65537, 1, 10, 1, 0, 65546, 1, 1, 11, 65537, 0, 65547, 65537, 1, 12, 1, 0, 65548, 1, 1, 13, 65537, 0, 65549, 65537, 1, 14, 1, 0, 65550, 1, 1, 15, 65537, 0, 65551, 65537, 1, 16, 1, 0, 65552, 1, 1, 17, 65537, 0, 65553, 65537, 1, 18, 1, 0, 65554, 1, 1, 19, 65537, 0, 65555, 65537, 1, 20, 1, 0, 65556, 1, 1, 21, 65537, 0, 65557, 65537, 1, 22, 1, 0, 65558, 1, 1, 23, 65537, 0, 65559, 65537, 1, 24, 1, 0, 65560, 1, 1, 25, 65537, 0, 65561, 65537, 1, 26, 1, 0, 65562, 1, 1, 27, 65537, 0, 65563, 65537, 1, 28, 1, 0, 65564, 1, 1, 29, 65537, 0, 65565, 65537, 1, 30, 1, 0, 65566, 1, 1, 31, 65537, 0, 65567, 65537, 1, 32, 1, 0, 65568, 1, 1, 33, 65537, 0, 65569, 65537, 1, 34, 1, 0, 65570, 1, 1, 35, 65537, 0, 65571, 65537, 1, 36, 1, 0, 65572, 1, 1, 37, 65537, 0, 65573, 65537, 1, 38, 1, 0, 65574, 1, 1, 39, 65537, 0, 65575, 65537, 1, 40, 1, 0, 65576, 1, 1, 41, 65537, 0, 65577, 65537, 1, 42, 1, 0, 65578, 1, 1, 43, 65537, 0, 65579, 65537, 1, 44, 1, 0, 65580, 1, 1, 45, 65537, 0, 65581, 65537, 1, 46, 1, 0, 65582, 1, 1, 47, 65537, 0, 65583, 65537, 1, 48, 1, 0, 65584, 1, 1, 49, 65537, 0, 65585, 65537, 1, 50, 1, 0, 65586, 1, 1, 51, 65537, 0, 65587, 65537, 1, 52, 1, 0, 65588, 1, 1, 53, 65537, 0, 65589, 65537, 1, 54, 1, 0, 65590, 1, 1, 55, 65537, 0, 65591, 65537, 1, 62, 2, 0, 65598, 2, 1, 63, 65538, 0, 65599, 65538, 1, 131134, 2, 0, 196670, 2, 1, 131135, 65538, 0, 196671, 65538, 1, 262206, 2, 0, 327742, 2, 1, 262207, 65538, 0, 327743, 65538, 1, 393278, 2, 0, 458814, 2, 1, 393279, 65538, 0, 458815, 65538, 1, 524350, 2, 0, 589886, 2, 1, 524351, 65538, 0, 589887, 65538, 1, 655422, 2, 0, 720958, 2, 1, 655423, 65538, 0, 720959, 65538, 1, 786494, 2, 0, 852030, 2, 1, 786495, 65538, 0, 852031, 65538, 1, 917566, 2, 0, 983102, 2, 1, 917567, 65538, 0, 983103, 65538, 1, 1048638, 2, 0, 1114174, 2, 1, 1048639, 65538, 0, 1114175, 65538, 1, 1179710, 2, 0, 1245246, 2, 1, 1179711, 65538, 0, 1245247, 65538, 1, 1310782, 2, 0, 1376318, 2, 1, 1310783, 65538, 0, 1376319, 65538, 1, 1441854, 2, 0, 1507390, 2, 1, 1441855, 65538, 0, 1507391, 65538, 1, 1572926, 2, 0, 1638462, 2, 1, 1572927, 65538, 0, 1638463, 65538, 1, 1703998, 2, 0, 1769534, 2, 1, 1703999, 65538, 0, 1769535, 65538, 1, 1835070, 2, 0, 1900606, 2, 1, 1835071, 65538, 0, 1900607, 65538, 1, 1966142, 2, 0, 2031678, 2, 1, 1966143, 65538, 0, 2031679, 65538, 1, 2097214, 2, 0, 2162750, 2, 1, 2097215, 65538, 0, 2162751, 65538, 1, 2228286, 2, 0, 2293822, 2, 1, 2228287, 65538, 0, 2293823, 65538, 1, 2359358, 2, 0, 2424894, 2, 1, 2359359, 65538, 0, 2424895, 65538, 1, 2490430, 2, 0, 2555966, 2, 1, 2490431, 65538, 0, 2555967, 65538, 1, 2621502, 2, 0, 2687038, 2, 1, 2621503, 65538, 0, 2687039, 65538, 1, 2752574, 2, 0, 2818110, 2, 1, 2752575, 65538, 0, 2818111, 65538, 1, 2883646, 2, 0, 2949182, 2, 1, 2883647, 65538, 0, 2949183, 65538, 1, 3014718, 2, 0, 3080254, 2, 1, 3014719, 65538, 0, 3080255, 65538, 1, 56, 1, 0, 65592, 1, 1, 57, 65537, 0, 65593, 65537, 1, 58, 1, 0, 65594, 1, 1, 59, 65537, 0, 65595, 65537, 1, 60, 1, 0, 65596, 1, 1, 61, 65537, 0, 65597, 65537, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+disable_mode = 1
+
+[node name="BlueBrick" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(32, 32)
+
+[node name="BlueBrick2" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(128, 32)
+
+[node name="BlueBrick3" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(224, 32)
+
+[node name="BlueBrick4" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(128, 64)
+
+[node name="BlueBrick5" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(800, 32)
+
+[node name="BlueBrick6" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(32, 64)
+
+[node name="BlueBrick7" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(512, 32)
+
+[node name="BlueBrick8" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(416, 32)
+
+[node name="BlueBrick9" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(896, 32)
+
+[node name="BlueBrick10" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(608, 32)
+
+[node name="BlueBrick11" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(320, 32)
+
+[node name="BlueBrick12" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(704, 32)
+
+[node name="BlueBrick13" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(224, 64)
+
+[node name="BlueBrick14" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(320, 64)
+
+[node name="BlueBrick15" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(416, 64)
+
+[node name="BlueBrick16" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(512, 64)
+
+[node name="BlueBrick17" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(608, 64)
+
+[node name="BlueBrick18" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(704, 64)
+
+[node name="BlueBrick19" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(800, 64)
+
+[node name="BlueBrick20" parent="Area2D" groups=["bricks"] instance=ExtResource("6_8dfe0")]
+position = Vector2(896, 64)
+
+[node name="GreenBrick" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(32, 96)
+
+[node name="GreenBrick2" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(128, 96)
+
+[node name="GreenBrick3" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(224, 96)
+
+[node name="GreenBrick4" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(320, 96)
+
+[node name="GreenBrick5" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(416, 96)
+
+[node name="GreenBrick6" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(512, 96)
+
+[node name="GreenBrick7" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(608, 96)
+
+[node name="GreenBrick8" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(704, 96)
+
+[node name="GreenBrick9" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(800, 96)
+
+[node name="GreenBrick10" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(896, 96)
+
+[node name="GreenBrick11" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(32, 128)
+
+[node name="GreenBrick12" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(128, 128)
+
+[node name="GreenBrick13" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(224, 128)
+
+[node name="GreenBrick14" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(320, 128)
+
+[node name="GreenBrick15" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(416, 128)
+
+[node name="GreenBrick16" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(512, 128)
+
+[node name="GreenBrick17" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(608, 128)
+
+[node name="GreenBrick18" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(704, 128)
+
+[node name="GreenBrick19" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(800, 128)
+
+[node name="GreenBrick20" parent="Area2D" groups=["bricks"] instance=ExtResource("8_8e11j")]
+position = Vector2(896, 128)
+
+[node name="DarkBrick" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(32, 160)
+
+[node name="DarkBrick2" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(128, 160)
+
+[node name="DarkBrick3" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(224, 160)
+
+[node name="DarkBrick4" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(320, 160)
+
+[node name="DarkBrick5" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(416, 160)
+
+[node name="DarkBrick6" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(512, 160)
+
+[node name="DarkBrick7" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(608, 160)
+
+[node name="DarkBrick8" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(704, 160)
+
+[node name="DarkBrick9" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(800, 160)
+
+[node name="DarkBrick10" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(896, 160)
+
+[node name="DarkBrick11" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(32, 192)
+
+[node name="DarkBrick12" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(128, 192)
+
+[node name="DarkBrick13" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(224, 192)
+
+[node name="DarkBrick14" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(320, 192)
+
+[node name="DarkBrick15" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(416, 192)
+
+[node name="DarkBrick16" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(512, 192)
+
+[node name="DarkBrick17" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(608, 192)
+
+[node name="DarkBrick18" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(704, 192)
+
+[node name="DarkBrick19" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(800, 192)
+
+[node name="DarkBrick20" parent="Area2D" groups=["bricks"] instance=ExtResource("9_0t22n")]
+position = Vector2(896, 192)
+
+[node name="CollisionOnBrick" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(512, 128)
+shape = SubResource("RectangleShape2D_e1gbg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause_Control" parent="CanvasLayer" instance=ExtResource("10_subv7")]

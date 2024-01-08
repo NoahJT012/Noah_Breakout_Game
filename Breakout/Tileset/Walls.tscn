@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdupq6irg0suj"]
+
+[ext_resource type="Texture2D" uid="uid://ddsicvt68seyx" path="res://Noah_Breakout/Breakout/GameAssets/Sprites/wall_blue.png" id="1_3pidi"]
+[ext_resource type="Texture2D" uid="uid://beola7bulql8x" path="res://Noah_Breakout/Breakout/GameAssets/Sprites/wall_gray.png" id="2_8j47u"]
+[ext_resource type="Texture2D" uid="uid://l4nevd6yt3xt" path="res://Noah_Breakout/Breakout/GameAssets/Sprites/wall_green.png" id="3_7l2rd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihyfa"]
+texture = ExtResource("1_3pidi")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arrod"]
+texture = ExtResource("2_8j47u")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oir7h"]
+texture = ExtResource("3_7l2rd")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8au1s"]
+sources/0 = SubResource("TileSetAtlasSource_ihyfa")
+sources/1 = SubResource("TileSetAtlasSource_arrod")
+sources/2 = SubResource("TileSetAtlasSource_oir7h")
+
+[node name="Walls" type="TileMap"]
+tile_set = SubResource("TileSet_8au1s")
+format = 2
