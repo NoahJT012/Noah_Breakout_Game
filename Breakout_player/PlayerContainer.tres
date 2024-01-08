@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="PlayerContainer" load_steps=2 format=3 uid="uid://c17rsc7qo3f3b"]
+
+[ext_resource type="Script" path="res://Breakout_player/PlayerContainer.gd" id="1_osuow"]
+
+[resource]
+script = ExtResource("1_osuow")
